@@ -18,10 +18,47 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+
+/* richneom */
+
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  /* Tamaño del elemento al borde no al contenido */
+}
+
+
+
+
+/* Tipos de posision */
+
+/* Posicion por defecto, si no se indica otra esta se usa */
+.default {
+  position: static;
+}
+
+/* Posicion con respecto a si mismo (con respencto a la posicion inicial que le corresponde) */
+.self {
+  position: relative;
+}
+
+/* Posicion con respecto al primer ascendiente no statico (no mantiene su espacio)*/
+.asc-nostatic {
+  position: absolute;
+}
+
+/* Posicion con respecto a la pantalla (no mantiene su espacio) */
+.screen {
+  position: fixed;
+}
+
+/* relative + fixed */
+.stiky {
+  position: sticky;
 }
